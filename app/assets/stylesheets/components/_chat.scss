@@ -4,14 +4,17 @@
   padding: 40px;
   height: 600px;
   width: 400px;
+  overflow: scroll;
 
-  .message-box{
-    position: absolute;
-    bottom: 0px;
-    width: 400px;
-  }
 
 }
+
+.message-box{
+  width: 482px;
+  resize: none;
+  border-radius: 0px;
+}
+
 .chat-box {
     width: 100%;
     height: auto;

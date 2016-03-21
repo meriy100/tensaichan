@@ -52,8 +52,8 @@
               |  ふきだしだよ
               br
               |  へへへ
-        = text_field_tag :message, "", class: "form-control message-box"
       canvas#glcanvas[width="480" height="680" style="border:dashed 1px #CCC"]
+      = text_field_tag :message, "", class: "form-control message-box", id: "message-box"
 
     #myconsole[style="color:#000"]
       | ---- Log ----
