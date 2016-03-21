@@ -8,6 +8,7 @@ window.onerror = function(msg, url, line, col, error) {
 
 function sampleApp1()
 {
+    console.log('ok');
     this.platform = window.navigator.platform.toLowerCase();
 
     this.live2DMgr = new LAppLive2DManager();
