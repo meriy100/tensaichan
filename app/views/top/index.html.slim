@@ -12,7 +12,7 @@
           |  ふきだしなのですーふきだしですーふきだー
     .chat-box
       .chat-face
-        img[src="[相手の画像URL]" alt="誰かのチャット画像です。" width="90" height="90"]
+      //  img[src="[相手の画像URL]" alt="誰かのチャット画像です。" width="90" height="90"]
       .chat-area
         .chat-hukidashi.someone
           |  ふきだしだよ
@@ -47,6 +47,16 @@
                 = image_tag user.image, size: '120', class: 'img-circle'
                 p
                   = user.name
+
+  div[onload="sampleApp1()"]
+    p
+      button#btnChange.active
+        | Change Model
+    div
+      canvas#glcanvas[width="680" height="940" style="border:dashed 1px #CCC"]
+
+    #myconsole[style="color:#000"]
+      | ---- Log ----
 
 .foot-block
   = link_to "Top",    root_path

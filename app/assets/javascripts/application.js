@@ -15,4 +15,6 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require vegas.min.js
+//= require lib/live2d.min.js
+//= require framework/Live2DFramework.js
 //= require_tree .
