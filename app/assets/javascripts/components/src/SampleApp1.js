@@ -42,23 +42,24 @@ function initL2dCanvas(canvasId)
 {
     // canvasオブジェクトを取得
 	this.canvas = document.getElementById(canvasId);
-  main
+  main = document.getElementById("main-panel")
+  console.log(main)
     // イベントの登録
-    if(this.canvas.addEventListener) {
-        this.canvas.addEventListener("mousewheel", mouseEvent, false);
-        this.canvas.addEventListener("click", mouseEvent, false);
+    if(main.addEventListener) {
+        main.addEventListener("mousewheel", mouseEvent, false);
+        main.addEventListener("click", mouseEvent, false);
 
-        this.canvas.addEventListener("mousedown", mouseEvent, false);
-        this.canvas.addEventListener("mousemove", mouseEvent, false);
+        main.addEventListener("mousedown", mouseEvent, false);
+        main.addEventListener("mousemove", mouseEvent, false);
 
-        this.canvas.addEventListener("mouseup", mouseEvent, false);
-        this.canvas.addEventListener("mouseout", mouseEvent, false);
-        this.canvas.addEventListener("contextmenu", mouseEvent, false);
+        main.addEventListener("mouseup", mouseEvent, false);
+        main.addEventListener("mouseout", mouseEvent, false);
+        main.addEventListener("contextmenu", mouseEvent, false);
 
         // タッチイベントに対応
-        this.canvas.addEventListener("touchstart", touchEvent, false);
-        this.canvas.addEventListener("touchend", touchEvent, false);
-        this.canvas.addEventListener("touchmove", touchEvent, false);
+        main.addEventListener("touchstart", touchEvent, false);
+        main.addEventListener("touchend", touchEvent, false);
+        main.addEventListener("touchmove", touchEvent, false);
 
     }
 
