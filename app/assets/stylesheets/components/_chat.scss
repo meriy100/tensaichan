@@ -1,3 +1,17 @@
+@import 'settings/mixins/_position.scss';
+.chat-window{
+  position: absolute;
+  padding: 40px;
+  height: 600px;
+  width: 400px;
+
+  .message-box{
+    position: absolute;
+    bottom: 0px;
+    width: 400px;
+  }
+
+}
 .chat-box {
     width: 100%;
     height: auto;

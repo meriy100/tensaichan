@@ -1,23 +1,6 @@
 .head-block
-  = render partial: '/layouts/user_icon', locals: { user: current_user, size: "42x42", klass: "img-circle margin_minus2" }
-  = current_user.name
 .body-block
   .row
-    .chat-box
-      .chat-face
-        // img[src="" alt="自分のチャット画像です。" width="90" height="90"]
-        = image_tag current_user.image, size: '90', class: 'img-circle'
-      .chat-area
-        .chat-hukidashi
-          |  ふきだしなのですーふきだしですーふきだー
-    .chat-box
-      .chat-face
-      //  img[src="[相手の画像URL]" alt="誰かのチャット画像です。" width="90" height="90"]
-      .chat-area
-        .chat-hukidashi.someone
-          |  ふきだしだよ
-          br
-          |  へへへ
     //
       .col-md-4
         .panel.panel-default
@@ -49,11 +32,28 @@
                   = user.name
 
   div[onload="sampleApp1()"]
-    p
+    //p
       button#btnChange.active
         | Change Model
     div
-      canvas#glcanvas[width="680" height="940" style="border:dashed 1px #CCC"]
+      .chat-window
+        .chat-box
+          .chat-face
+            // img[src="" alt="自分のチャット画像です。" width="90" height="90"]
+            = image_tag current_user.image, size: '90', class: 'img-circle'
+          .chat-area
+            .chat-hukidashi
+              |  ふきだしなのですーふきだしですーふきだー
+        .chat-box
+          .chat-face
+          //  img[src="[相手の画像URL]" alt="誰かのチャット画像です。" width="90" height="90"]
+          .chat-area
+            .chat-hukidashi.someone
+              |  ふきだしだよ
+              br
+              |  へへへ
+        = text_field_tag :message, "", class: "form-control message-box"
+      canvas#glcanvas[width="480" height="680" style="border:dashed 1px #CCC"]
 
     #myconsole[style="color:#000"]
       | ---- Log ----

@@ -9,15 +9,8 @@ html
     == render partial: 'shared/header'
     .container-fluid
       .row
-        == render partial: 'shared/sidebar'
         .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
-          .row
-            .col-md-10
-              = yield
-            .col-md-2
-              = image_tag 'ad1.jpg'
-              = image_tag 'ad2.jpg'
-              = image_tag 'ad3.jpg'
+          = yield
 
 /
     center
