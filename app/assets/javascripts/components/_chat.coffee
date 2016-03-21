@@ -12,6 +12,7 @@ $(document).on 'ready page:load', ->
     if e.keyCode == 13
       word = $(this).val()
       $(".chat-window").append("<div class='chat-box'><div class='chat-area'><div class='chat-hukidashi you'>#{word}</div></div></div>")
+      $(this).val("")
       # scrollWindow()
       $.ajax(
         url: "search"

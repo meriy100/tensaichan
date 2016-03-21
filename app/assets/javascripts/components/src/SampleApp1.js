@@ -176,7 +176,7 @@ function draw()
                 var btnChange = document.getElementById("btnChange");
                 btnChange.textContent = "Change Model";
                 btnChange.removeAttribute("disabled");
-                btnChange.setAttribute("class", "active");
+                btnChange.setAttribute("class", "active btn btn-dengar");
             }
         }
     }
@@ -189,7 +189,7 @@ function changeModel()
 {
     var btnChange = document.getElementById("btnChange");
     btnChange.setAttribute("disabled","disabled");
-    btnChange.setAttribute("class", "inactive");
+    btnChange.setAttribute("class", "inactive btn btn-success");
     btnChange.textContent = "Now Loading...";
     this.isModelShown = false;
 
