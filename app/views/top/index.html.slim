@@ -35,18 +35,13 @@
     p
       button.btn.btn-success#btnChange.active
         | Change Model
-    div
+    div.main-panel
       .chat-window
         .chat-box
-          .chat-face
-            // img[src="" alt="自分のチャット画像です。" width="90" height="90"]
-            = image_tag current_user.image, size: '90', class: 'img-circle'
           .chat-area
-            .chat-hukidashi
+            .chat-hukidashi.you
               |  ふきだしなのですーふきだしですーふきだー
         .chat-box
-          .chat-face
-          //  img[src="[相手の画像URL]" alt="誰かのチャット画像です。" width="90" height="90"]
           .chat-area
             .chat-hukidashi.someone
               |  ふきだしだよ

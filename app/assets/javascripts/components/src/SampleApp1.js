@@ -42,7 +42,7 @@ function initL2dCanvas(canvasId)
 {
     // canvasオブジェクトを取得
 	this.canvas = document.getElementById(canvasId);
-
+  main
     // イベントの登録
     if(this.canvas.addEventListener) {
         this.canvas.addEventListener("mousewheel", mouseEvent, false);
