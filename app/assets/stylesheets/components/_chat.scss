@@ -3,14 +3,14 @@
 //#chat-body   { position:absolute; top:0; left:0; }
 .chat-window{
   position: absolute;
-  padding: 40px;
   height: 600px;
-  width: 400px;
+  padding: 10px;
+  width: 480px;
   overflow: scroll;
-
-
 }
-
+#main-panel{
+  width: 480px;
+}
 .message-box{
   width: 482px;
   resize: none;
@@ -23,15 +23,6 @@
     overflow: hidden; /*floatの解除*/
     margin-bottom: 20px;
 }
-.chat-face {
-    float: left;
-    margin-right: -120px;
-}
-.chat-face img{
-    border-radius: 30px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 4px #ddd;
-}
 .chat-area {
     width: 100%;
     float: right;
@@ -39,12 +30,15 @@
 .chat-hukidashi {
     display: inline-block; /*コメントの文字数に合わせて可変*/
     padding: 5px 20px;
-    margin-left: 120px;
+    min-height: 40px;
     margin-top: 10px;
+    max-width: 200px;
+    max-height: 380px;
 //    border: 1px solid gray;
     border-radius: 10px;
     position: relative; /*追記*/
     background-color: #D9F0FF; /*追記*/
+    overflow: hidden;
 }
 /* ↓追記↓ */
 .chat-hukidashi:after {
@@ -56,6 +50,10 @@
     height: 0px;
     border-style: solid;
 }
+.you{
+  right: 0;
+  float: right;
+}
 .you:after{
   top: 50%; right: -10px;
   border-width: 10px 10px 10px 0;
@@ -64,6 +62,7 @@
 
 .someone {
     background-color: #BCF5A9;
+    float: left;
 }
 .someone:after {
     top: 50%; left: -10px;

@@ -32,27 +32,20 @@
                   = user.name
 
   div#live2d
-    p
-      button.btn.btn-success#btnChange.active
-        | Change Model
     div#main-panel
       .chat-window
         .chat-box
           .chat-area
-            .chat-hukidashi.you
-              |  ふきだしなのですーふきだしですーふきだー
-        .chat-box
-          .chat-area
             .chat-hukidashi.someone
-              |  ふきだしだよ
-              br
-              |  へへへ
-      canvas#glcanvas[width="480" height="680" style="border:dashed 1px #CCC"]
-      = text_field_tag :message, "", class: "form-control message-box", id: "message-box"
-
+              |  なんでも聞いてね
+      canvas#glcanvas[width="481" height="680" style="border:dashed 1px #CCC"]
+    = text_field_tag :message, "", class: "form-control message-box", id: "message-box"
     #myconsole[style="color:#000"]
       | ---- Log ----
 
+    p
+      button.btn.btn-success#btnChange.active
+        | Change Model
 .foot-block
   = link_to "Top",    root_path
   = link_to "Logout", logout_path
