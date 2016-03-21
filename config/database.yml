@@ -25,6 +25,6 @@ test:
 
 production:
   adapter: postgresql
-  encoding: utf8
-  database: tensaichan_pg
-  port: 5432
+  encoding: unicode
+  pool: 5
+  database: tensaichan.pg
