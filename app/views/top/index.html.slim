@@ -1,0 +1,60 @@
+.head-block
+  = render partial: '/layouts/user_icon', locals: { user: current_user, size: "42x42", klass: "img-circle margin_minus2" }
+  = current_user.name
+.body-block
+  .row
+    .chat-box
+      .chat-face
+        // img[src="" alt="自分のチャット画像です。" width="90" height="90"]
+        = image_tag current_user.image, size: '90', class: 'img-circle'
+      .chat-area
+        .chat-hukidashi
+          |  ふきだしなのですーふきだしですーふきだー
+    .chat-box
+      .chat-face
+        img[src="[相手の画像URL]" alt="誰かのチャット画像です。" width="90" height="90"]
+      .chat-area
+        .chat-hukidashi.someone
+          |  ふきだしだよ
+          br
+          |  へへへ
+    //
+      .col-md-4
+        .panel.panel-default
+          .panel-body
+            | あなたの情報
+            dl.dl-horizontal.user-profile
+              = bootstrap_form_for current_user.user_profile, layout: :horizontal do |f|
+                dt = f.label :age
+                dd = f.static_control :age, hide_label: true, label_col: '', control_col: 'col-md-12'
+                dt = f.label :prefecture_id
+                dd
+                dt = f.label :gender_id
+                dd
+                dt = f.label :height
+                dd = f.static_control :height, hide_label: true, label_col: '', control_col: 'col-md-12'
+                dt = f.label :weight
+                dd = f.static_control :weight, hide_label: true, label_col: '', control_col: 'col-md-12'
+                - UserProfile.belongs_to_columns.each do |column|
+                  dt = f.label "#{column}_id"
+                  dd.profile-column[data-url="#{edit_user_profile_path(f.object)}" data-column="#{column}"]
+                    = f.object.send(column).try :name
+      .col-md-8
+        .panel.panel-default
+          .row
+            - User.all.each do |user|
+              .col-md-3.col-sm-4
+                = image_tag user.image, size: '120', class: 'img-circle'
+                p
+                  = user.name
+
+.foot-block
+  = link_to "Top",    root_path
+  = link_to "Logout", logout_path
+  = simple_format(flash[:notice], style: "color: green;") if flash[:notice].present?
+
+= link_to "edit", edit_user_profile_path(current_user.user_profile), class: "btn", remote: true
+
+.modal.fade#user-profile-modal[tabindex="-1" role="dialog"]
+
+

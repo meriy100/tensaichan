@@ -1,0 +1,20 @@
+@import 'settings/variables/_color';
+
+.btn{
+  border-radius : 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+}
+
+.btn-facebook{
+  background-color: $facebook-color;
+  color : #fff;
+  .fa-facebook{
+    font-size: 1.5em;
+    span{
+      margin-left: 4px;
+    }
+  }
+
+}
+.btn-facebook:visited { color:#fff; }

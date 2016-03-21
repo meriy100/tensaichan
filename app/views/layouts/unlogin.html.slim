@@ -1,0 +1,25 @@
+html
+  head
+    title= Settings.app_name
+    link[rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css']
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+
+    = yield
+
+
+/
+    center
+      |Developed by
+      = succeed "," do
+        a[href="https://twitter.com/#{Settings.programmer_twitter_id}/", target='_blank' ]
+          = "@#{Settings.programmer_twitter_id}"
+      |Designed by
+      = succeed "," do
+        a[ href= "https://twitter.com/#{Settings.designer_twitter_id}/", target= '_blank' ]
+          = "@#{Settings.designer_twitter_id}"
+      |Licence by
+      a[ href= 'https://creativecommons.org/licenses/by-nc-sa/2.1/jp/', target= '_blank' ]
+        CC BY-NC-SA 2.1

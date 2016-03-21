@@ -1,0 +1,22 @@
+ja:
+  activerecord:
+    attributes:
+      user_profile:
+        age: 年齢
+        prefecture_id: 在住県
+        gender_id: 性別
+        job_id: 職業
+        height: 身長
+        weight: 体重
+        blood_type_id: 血液型
+        academic_background_id: 学歴
+        drink_id: お酒
+        smoking_id: タバコ
+        nationality_id: 国籍
+        annual_income_id: 年収
+        marital_history_id: 結婚歴
+        has_children_type_id: 子供の有無
+        marriage_intention_type_id: 結婚に対する意思
+        want_child_type_id: 子供がほしいか
+        homework_type_id: 家事 育児
+

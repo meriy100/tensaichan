@@ -1,0 +1,36 @@
+@import 'settings/variables/_color.scss';
+@import 'settings/mixins/_position.scss';
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+
+#top-content{
+  height: 100%;
+  position: relative;
+  .top-box{
+    @include center_block;
+    height: 450px;
+    width: 400px;
+    border: solid $white 4px;
+    .header{
+      border-bottom : solid $white 1px;
+      margin-left : 10px;
+      margin-right : 10px;
+      h1{
+        font-family: 'Dancing Script', cursive;
+        color : $white;
+        font-size : 48px;
+        text-align: center;
+      }
+    }
+    .body{
+      padding : 20px;
+      p.explanation{
+        font-size : 16px;
+        color : $white;
+      }
+    }
+    .footer{
+      @include lower_gripping;
+      padding : 20px;
+    }
+  }
+}

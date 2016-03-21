@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user_profile.user_id %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @user_profile.age %>
+</p>
+
+<p>
+  <strong>Prefecture:</strong>
+  <%= @user_profile.prefecture_id %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @user_profile.gender_id %>
+</p>
+
+<p>
+  <strong>Job:</strong>
+  <%= @user_profile.job_id %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @user_profile.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @user_profile.weight %>
+</p>
+
+<p>
+  <strong>Deleted at:</strong>
+  <%= @user_profile.deleted_at %>
+</p>
+
+<%= link_to 'Edit', edit_user_profile_path(@user_profile) %> |
+<%= link_to 'Back', user_profiles_path %>
