@@ -1,36 +1,5 @@
 .head-block
 .body-block
-  .row
-    //
-      .col-md-4
-        .panel.panel-default
-          .panel-body
-            | あなたの情報
-            dl.dl-horizontal.user-profile
-              = bootstrap_form_for current_user.user_profile, layout: :horizontal do |f|
-                dt = f.label :age
-                dd = f.static_control :age, hide_label: true, label_col: '', control_col: 'col-md-12'
-                dt = f.label :prefecture_id
-                dd
-                dt = f.label :gender_id
-                dd
-                dt = f.label :height
-                dd = f.static_control :height, hide_label: true, label_col: '', control_col: 'col-md-12'
-                dt = f.label :weight
-                dd = f.static_control :weight, hide_label: true, label_col: '', control_col: 'col-md-12'
-                - UserProfile.belongs_to_columns.each do |column|
-                  dt = f.label "#{column}_id"
-                  dd.profile-column[data-url="#{edit_user_profile_path(f.object)}" data-column="#{column}"]
-                    = f.object.send(column).try :name
-      .col-md-8
-        .panel.panel-default
-          .row
-            - User.all.each do |user|
-              .col-md-3.col-sm-4
-                = image_tag user.image, size: '120', class: 'img-circle'
-                p
-                  = user.name
-
   div#live2d
     div#main-panel
       .chat-window
@@ -38,21 +7,15 @@
           .chat-area
             .chat-hukidashi.someone
               |  なんでも聞いてね
-      canvas#glcanvas[width="481" height="680" style="border:dashed 1px #CCC"]
+      canvas#glcanvas[width="410" height="600" style="border:dashed 1px #CCC"]
     = text_field_tag :message, "", class: "form-control message-box", id: "message-box"
     #myconsole[style="color:#000"]
-      | ---- Log ----
 
     p
       button.btn.btn-success.active#btnChange
         | Change Model
-.foot-block
-  = link_to "Top",    root_path
-  = link_to "Logout", logout_path
-  = simple_format(flash[:notice], style: "color: green;") if flash[:notice].present?
-
-= link_to "edit", edit_user_profile_path(current_user.user_profile), class: "btn", remote: true
-
-.modal.fade#user-profile-modal[tabindex="-1" role="dialog"]
+      a.btn.btn-primary[href="./window.html" onclick="window.open('/', '', 'width=414,height=736', 'location=false'); return false;"]
+        | 新しいウィンドウ
+      = link_to "Logout", logout_path, class: "btn btn-info"
 
 
